@@ -1,5 +1,23 @@
+## Desktop view
+![](images/desktop-view.PNG)
+
 ## Mobile View
-![](image/desktop-view.PNG)
+![](images/mobile%20view.PNG)
+
+## Tablet View
+![](images/tablet-view.PNG)
+
+## Filter selection
+
+![](images/mobile-view-filter-selection.PNG)
+
+## When data is not available
+![](images/when-data-not-available.PNG)
+
+## LightHouse report
+![](images/lightHouse1.PNG)
+
+## 
 
 ## SpaceX
 
