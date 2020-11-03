@@ -1,8 +1,10 @@
 ## Server-side rendering (SSR) with Angular Universal
- #used cammand: ng add @nguniversal/spacex
+cmd: ng add @nguniversal/spacex
+
 The Angular CLI compiles and bundles the Universal version of the app with the Ahead-of-Time (AOT) compiler. A Node.js Express web server compiles HTML pages with Universal based on client requests
  
 ## Grid Implementation using CSS Grid Layout
+
 
 ## Desktop view
 ![](images/desktop-view.PNG)
@@ -19,6 +21,17 @@ The Angular CLI compiles and bundles the Universal version of the app with the A
 
 ## When data is not available
 ![](images/when-data-not-available.PNG)
+
+## Used Rxjs 
+RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using observables that makes it easier to compose asynchronous or callback-based code.
+
+RxJS provides an implementation of the Observable type, which is needed until the type becomes part of the language and until browsers support it. The library also provides utility functions for creating and working with observables. These utility functions can be used for:
+
+-Converting existing code for async operations into observables
+-Iterating through the values in a stream
+-Mapping values to different types
+-Filtering streams
+-Composing multiple streams
 
 ## LightHouse report
 ![](images/lightHouse1.PNG)
