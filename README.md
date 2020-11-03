@@ -2,6 +2,8 @@
  #used cammand: ng add @nguniversal/spacex
 The Angular CLI compiles and bundles the Universal version of the app with the Ahead-of-Time (AOT) compiler. A Node.js Express web server compiles HTML pages with Universal based on client requests
  
+## Grid Implementation using CSS Grid Layout
+
 ## Desktop view
 ![](images/desktop-view.PNG)
 
