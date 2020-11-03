@@ -1,0 +1,83 @@
+<div class="main">
+  <div class="filters-container">
+    <h3 class="filter-title">Filters</h3>
+    <!-- Year filter -->
+    <div class="filter-title">
+      <span>Launch Year</span>
+      <hr />
+      <div class="grid-container">
+        <div
+          *ngFor="let in of counter(15); let i = index"
+          [ngClass]="{ 'selected-filter': i + startYear == filters.year }"
+          (click)="applyFilters(i + startYear, filters.launch, filters.landed)"
+          class="grid-item"
+        >
+          {{ i + startYear }}
+        </div>
+      </div>
+    </div>
+    <!-- Launch filter -->
+    <div class="filter-title">
+      <span>Successful Launch</span>
+      <hr />
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          [ngClass]="{ 'selected-filter': 'true' == filters.launch }"
+          (click)="applyFilters(filters.year, 'true', filters.landed)"
+        >
+          true
+        </div>
+        <div
+          class="grid-item"
+          [ngClass]="{ 'selected-filter': 'false' == filters.launch }"
+          (click)="applyFilters(filters.year, 'false', filters.landed)"
+        >
+          false
+        </div>
+      </div>
+    </div>
+    <!-- Landing filters -->
+    <div class="filter-title">
+      <span>Successful Landing</span>
+      <hr />
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          [ngClass]="{ 'selected-filter': 'true' == filters.landed }"
+          (click)="applyFilters(filters.year, filters.launch, 'true')"
+        >
+          true
+        </div>
+        <div
+          class="grid-item"
+          [ngClass]="{ 'selected-filter': 'false' == filters.landed }"
+          (click)="applyFilters(filters.year, filters.launch, 'false')"
+        >
+          false
+        </div>
+      </div>
+    </div>
+    <!-- Clear all filters  -->
+    <div class="filter-title">
+      <span>Clear Filters</span>
+      <hr />
+      <div (click)="clearFilters()" class="grid-item clear-filter">CLEAR</div>
+    </div>
+  </div>
+  <div>
+    <!-- Launch details -->
+    <app-missions
+      *ngIf="launchDetails?.length > 0; else elseBlock"
+      [launchDetails]="launchDetails"
+    ></app-missions>
+    <ng-template #elseBlock>
+      <div *ngIf="allMissionDetails" class="no-data">
+        <h1>No data is available with following selection</h1>
+        <p>YEAR:{{ filters.year ? filters.year : "Not specified" }}</p>
+        <p>Launch:{{ filters.launch ? filters.launch : "Not specified" }}</p>
+        <p>Landing: {{ filters.landed ? filters.landed : "Not specified" }}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
