@@ -1,3 +1,7 @@
+## Server-side rendering (SSR) with Angular Universal
+ #used cammand: ng add @nguniversal/spacex
+The Angular CLI compiles and bundles the Universal version of the app with the Ahead-of-Time (AOT) compiler. A Node.js Express web server compiles HTML pages with Universal based on client requests
+ 
 ## Desktop view
 ![](images/desktop-view.PNG)
 
@@ -17,7 +21,11 @@
 ## LightHouse report
 ![](images/lightHouse1.PNG)
 
-## 
+## Karma test runner output
+![](images/karma-test-runner-output.PNG)
+
+## Test coverage
+![](images/test-coverage.PNG)
 
 ## SpaceX
 
